@@ -1,4 +1,3 @@
-
 let totalPeople = 1000;
 let remainingPeople = totalPeople;
 let removedPeople = 0;

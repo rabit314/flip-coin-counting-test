@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,25 +10,31 @@
 
     <div class="version">Version 1.3.0</div>
 
-    <div class="buttons">
-        <button onclick="flipCoins()">Flip Coins</button>
-        <button onclick="filterByHead()">Head</button>
-        <button onclick="filterByTail()">Tail</button>
-        <button onclick="resetExperiment()">Reset</button>
-    </div>
+    <div class="container">
+        <div class="header">
+            <h1>Coin Flip Experiment</h1>
+        </div>
 
-    <div class="results">
-        Head: <span id="head-count">0</span> | Tail: <span id="tail-count">0</span> <br>
-        People Left: <span id="people-left">1000</span> | People Removed: <span id="people-removed">0</span>
-    </div>
+        <div class="buttons">
+            <button onclick="flipCoins()">Flip Coins</button>
+            <button onclick="filterByHead()">Head</button>
+            <button onclick="filterByTail()">Tail</button>
+            <button onclick="resetExperiment()">Reset</button>
+        </div>
 
-    <div class="counter">
-        Flip Button Pressed: <span id="flip-count">0</span> times<br>
-        Head Button Pressed: <span id="head-press-count">0</span> times<br>
-        Tail Button Pressed: <span id="tail-press-count">0</span> times
-    </div>
+        <div class="results">
+            Head: <span id="head-count">0</span> | Tail: <span id="tail-count">0</span> <br>
+            People Left: <span id="people-left">1000</span> | People Removed: <span id="people-removed">0</span>
+        </div>
 
-    <div id="people-container"></div>
+        <div class="counter">
+            Flip Button Pressed: <span id="flip-count">0</span> times | 
+            Head Button Pressed: <span id="head-press-count">0</span> times | 
+            Tail Button Pressed: <span id="tail-press-count">0</span> times
+        </div>
+
+        <div id="people-container"></div>
+    </div>
 
     <script src="script.js"></script>
     
