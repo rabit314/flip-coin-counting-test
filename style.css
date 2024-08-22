@@ -7,11 +7,13 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
 .container {
     width: 100%;
     max-width: 1200px;
     text-align: center;
 }
+
 .version {
     position: absolute;
     top: 10px;
@@ -19,17 +21,21 @@ body {
     font-size: 12px;
     color: #888;
 }
+
 .header {
     margin-bottom: 20px;
 }
+
 .header h1 {
     font-size: 2.5em;
     color: #333;
     margin-bottom: 10px;
 }
+
 .buttons {
     margin-bottom: 20px;
 }
+
 .buttons button {
     margin: 5px;
     padding: 10px 20px;
@@ -41,19 +47,23 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
 .buttons button:hover {
     background-color: #434190;
 }
+
 .results {
     margin: 20px 0;
     font-size: 1.2em;
     color: #333;
 }
+
 .counter {
     font-size: 0.9em;
     color: #666;
     margin-top: 5px;
 }
+
 .person {
     width: 50px; /* Increased width */
     text-align: center;
@@ -61,14 +71,88 @@ body {
     font-size: 35px; /* Increased font size */
     display: inline-block;
 }
+
 .coin {
     font-size: 25px; /* Increased font size */
     color: #5a67d8;
 }
+
 #people-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     max-width: 100%;
     margin: 20px 0;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    width: 100%;
+    background-color: #5a67d8;
+    overflow: hidden;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #434190;
+}
+
+/* Container for the left-aligned links */
+.navbar-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.navbar-left a {
+    margin-right: 20px; /* Space between links */
+}
+
+/* Style for the version text in the navbar */
+.navbar-version {
+    color: white;
+    font-size: 14px;
+    padding: 14px 20px;
+    text-align: right;
+}
+
+/* Instructions Page Styles */
+.instructions {
+    text-align: left;  /* Align text to the left for readability */
+    margin: 0 auto;    /* Center the instructions block */
+    padding: 20px;     /* Add padding for better spacing */
+    background-color: #fff;  /* White background for clarity */
+    border-radius: 8px;  /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+}
+
+.instructions h2 {
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.instructions ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.instructions li {
+    margin-bottom: 10px;
+}
+
+.footer {
+    margin-top: 20px;
 }
