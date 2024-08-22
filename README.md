@@ -34,7 +34,7 @@ This project is a web-based simulation of a coin flip experiment involving 1,000
 
 ### Version
 
-- **Current Version:** 1.4.0
+- **Current Version:** 1.4.1
 
 ### Developer Notes
 
