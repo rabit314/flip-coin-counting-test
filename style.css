@@ -128,28 +128,29 @@ body {
     text-align: right;
 }
 
-/* Instructions Page Styles */
-.instructions {
-    text-align: left;  /* Align text to the left for readability */
-    margin: 0 auto;    /* Center the instructions block */
-    padding: 20px;     /* Add padding for better spacing */
-    background-color: #fff;  /* White background for clarity */
-    border-radius: 8px;  /* Rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+/* Content Styles for About Page */
+.content {
+    text-align: left;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.1em;
+    line-height: 1.6;
+    max-width: 800px;
 }
 
-.instructions h2 {
-    color: #333;
-    font-size: 1.8em;
-    margin-bottom: 10px;
+.content p {
+    margin-bottom: 20px;
 }
 
-.instructions ul {
+.content ul {
     list-style-type: disc;
     margin-left: 20px;
 }
 
-.instructions li {
+.content ul li {
     margin-bottom: 10px;
 }
 
