@@ -1,4 +1,4 @@
-#Coin Flip Experiment
+# Coin Flip Experiment
 
 This project is a web-based simulation of a coin flip experiment involving 1,000 people. Each person flips a coin, and the results (Heads or Tails) are displayed. The project includes several features such as filtering by Heads or Tails and resetting the experiment.
 
