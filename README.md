@@ -1,41 +1,46 @@
-# Coin Flip Experiment
+# Coin Flip
 
-This project is a web-based simulation of a coin flip experiment involving 1,000 people. Each person flips a coin, and the results (Heads or Tails) are displayed. The project includes several features such as filtering by Heads or Tails and resetting the experiment.
+A responsive, interactive probability playground. Start with 1,000 people, flip a coin for each, keep heads or tails, and repeat to explore randomness.
 
-### Features
+## Features
 
-- **Coin Flip Simulation:**
-  - Each person flips a coin with results shown as "H" (Heads) or "T" (Tails).
-  - The simulation includes 1,000 people represented by emojis.
+- Warm editorial design, illustrated animated coin, and responsive desktop/mobile layouts.
+- A compact participant grid: neutral before flipping, orange **H** for heads, green **T** for tails. Hover for participant details.
+- Live remaining/removed counts, heads/tails percentages, round count, and outcome distribution.
+- Keep heads or tails to remove the opposite result. Flip again to reroll only the remaining participants.
+- Recent history of the last six moves and per-filter usage counts.
+- Start over restores all 1,000 participants and clears counters/history.
+- Space to flip when focus is outside interactive controls; native keyboard activation for buttons.
+- Screen-reader announcements, descriptive chart labels, skip links, focus indicators, and reduced-motion support.
+- Matching **How it works** and **About** pages.
 
-- **Buttons:**
-  - **Flip Coins:** Flips the coins for all remaining people without resetting the total count.
-  - **Filter by Heads:** Removes all people who got Tails, leaving only those who got Heads.
-  - **Filter by Tails:** Removes all people who got Heads, leaving only those who got Tails.
-  - **Reset:** Resets the experiment back to 1,000 people with their coins unflipped.
+## Run locally
 
-- **Counters:**
-  - Displays the number of times each button (Flip, Head, Tail) has been pressed.
+No dependencies or build step. Open `index.html` directly, or serve this directory:
 
-- **Version Information:**
-  - The current version of the site is displayed at the top right corner of the screen.
+```sh
+python -m http.server 8000
+```
 
-### Project Structure
+Then open http://localhost:8000.
 
-- **index.html:** The main HTML file that structures the webpage.
-- **style.css:** The CSS file that styles the webpage, making it visually appealing and responsive.
-- **script.js:** The JavaScript file that contains the logic for the coin flip experiment, including flipping coins, filtering results, and resetting the experiment.
+## Experiment behavior
 
-### How to Use
+Filtering is disabled until the first flip. Displayed outcome counts and percentages always describe the current remaining participants. Keeping the same side again without flipping changes no participants; keeping the opposite side may empty the field. An empty field offers a reset.
 
-- **Flip Coins:** Click the "Flip Coins" button to flip the coins for all 1,000 people.
-- **Filter Results:** Use the "Head" or "Tail" buttons to filter the results and see how many people got Heads or Tails.
-- **Reset Experiment:** Click the "Reset" button to start over with 1,000 people.
+Results exist only in memory: reloading or navigating away starts a new experiment. Every simulated flip uses JavaScript's `Math.random()` independently with equal probability for heads and tails. This is an educational tool, not a cryptographic randomness source.
 
-### Version
+## Files
 
-- **Current Version:** 1.6.5
+- `index.html`: experiment dashboard
+- `style.css`: shared design, responsive layout, and motion preferences
+- `script.js`: simulation, rendering, controls, keyboard shortcut, and history
+- `instructions.html`: guide to using the experiment
+- `about.html`: project background and credits
+- `favicon.svg`: coin icon
 
-### Developer Notes
+## Credits
 
-This project was developed to demonstrate a basic yet interactive web-based simulation. The focus was on creating a simple user interface with clear and responsive interactions. Future updates may include additional filtering options, statistical analysis of results, and enhancements to the user interface.
+Created by **Rabit Bin Khalil** with assistance from **ChatGPT**.
+
+Version 2.0.

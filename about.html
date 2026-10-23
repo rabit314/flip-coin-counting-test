@@ -1,56 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coin Flip Experiment - About</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About the experiment — an interactive probability playground with 1,000 coin flips.">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>About the experiment — Coin Flip</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="navbar-left">
-            <a href="index.html">Home</a>
-            <a href="instructions.html">Instructions</a>
-            <a href="about.html">About</a>
-        </div>
-    </nav>
-
-    <div class="container">
-        <div class="header">
-            <h1>About the Coin Flip Experiment</h1>
-        </div>
-
-        <div class="content">
-            <p>
-                The Coin Flip Experiment is a web-based interactive simulation that visually demonstrates the principles of probability and randomness using a simple coin flip scenario. This experiment involves 1,000 participants, each flipping a coin, with the outcomes (Heads or Tails) displayed in real-time.
-            </p>
-            <p>
-                The project was designed to provide an engaging way to explore the concept of randomness. Whether you're a student, educator, or just someone interested in probability, this simulation offers a hands-on approach to understanding how randomness works and how it can be observed in real-world scenarios.
-            </p>
-            <p>
-                Some of the key features of this project include:
-            </p>
-            <ul>
-                <li><strong>Coin Flip Simulation:</strong> Simulates the coin flips of 1,000 participants with results displayed dynamically.</li>
-                <li><strong>Filtering Options:</strong> Allows users to filter the results to see only the participants who flipped Heads or Tails.</li>
-                <li><strong>Reset Functionality:</strong> Resets the experiment, allowing users to start over with a fresh set of participants.</li>
-                <li><strong>User Interface:</strong> A clean and intuitive interface that makes the experiment easy to use and understand.</li>
-            </ul>
-            <p>
-                This project is an excellent example of how simple concepts can be brought to life through interactive web development. It was created to serve as both a learning tool and an entertaining demonstration of probability in action.
-            </p>
-            <p>
-                <strong>Credits:</strong><br>
-                This project was created by <strong>Rabit Bin Khalil</strong> with valuable assistance from <strong>ChatGPT</strong>.
-            </p>
-        </div>
-
-        <div class="footer">
-            <a href="index.html" class="back-link">Back to Experiment</a>
-        </div>
+<body class="reading-page">
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="brand" href="index.html" aria-label="Coin Flip home"><span class="brand-mark" aria-hidden="true">c<span>f</span></span>coinflip<span class="brand-period">.</span></a>
+    <nav aria-label="Main navigation"><a href="index.html">The experiment</a><a href="instructions.html">How it works</a><a class="active" aria-current="page" href="about.html">About</a></nav>
+    <span class="header-note"><span class="status-dot"></span> A little experiment in chance</span>
+  </header>
+  <main class="wrap" id="content" tabindex="-1">
+    <section class="reading-hero"><p class="eyebrow"><span class="tiny-star" aria-hidden="true">✳</span> SMALL EXPERIMENT. BIG IDEAS.</p><h1>A little curiosity.<br><em>A lot of possibility.</em></h1><p>Coin Flip turns an abstract idea into something you can see, play with, and question. Because sometimes the best way to understand probability is to let it happen.</p></section>
+    <div class="reading-layout">
+      <article class="reading-card"><h2>Meet your probability playground.</h2><p>The idea is simple: 1,000 people each flip a coin. Some get heads. Some get tails. You choose who stays, flip again, and watch a crowd become a handful.</p><p>Built for students, educators, and anyone with a curious streak, this interactive experiment explores randomness, independent events, and the difference between an expected outcome and an actual one.</p><h2>Every dot is a possibility.</h2><p>Each dot represents one person. An unflipped coin is neutral, heads are orange and marked H, and tails are green and marked T. The counters, distribution bar, and move history help you follow how the experiment changes.</p><p>Coins are simulated independently in your browser using JavaScript's <code>Math.random()</code>. This is an educational simulation, rather than a source of cryptographic randomness.</p><div class="credits"><p>Created by <strong>Rabit Bin Khalil</strong>, with assistance from <strong>ChatGPT</strong>. A small web project built to make probability a little more approachable.</p><p><a class="text-link" href="https://github.com/rabit314/flip-coin-counting-test" target="_blank" rel="noopener noreferrer">Explore the source on GitHub ↗</a></p></div></article>
+      <aside class="reading-aside"><section class="reading-card"><p class="eyebrow">THE EXPERIMENT AT A GLANCE</p><div class="fact-row"><span>Starting participants</span><strong>1,000</strong></div><div class="fact-row"><span>Possible outcomes</span><strong>Heads / tails</strong></div><div class="fact-row"><span>Chance per side</span><strong>50%</strong></div><div class="fact-row"><span>Limits on curiosity</span><strong>None</strong></div><a class="button button-primary" href="index.html">Let's experiment <span aria-hidden="true">↗</span></a></section><div class="insight-panel"><span class="insight-icon" aria-hidden="true">✳</span><div><p class="eyebrow">A THOUGHT TO TAKE WITH YOU</p><h2>Chance has no memory.</h2><p>Five heads in a row? The next fair flip still has a 50% chance of being heads. The coin doesn't know what happened before.</p><a href="instructions.html">See how it works <span aria-hidden="true">↗</span></a></div></div></aside>
     </div>
-
+  </main>
+  <footer class="site-footer wrap"><span>A small playground for big probabilities.</span><span>Made by <a href="about.html">Rabit Bin Khalil</a><span class="footer-divider">/</span>v2.0</span></footer>
 </body>
 </html>

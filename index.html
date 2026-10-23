@@ -1,54 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coin Flip Experiment</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Flip 1,000 coins, follow the outcomes, and explore probability in an interactive experiment.">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>Coin Flip — A little experiment in chance</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="navbar-left">
-            <a href="index.html">Home</a>
-            <a href="instructions.html">Instructions</a>
-            <a href="about.html">About</a>
-        </div>
-        <span class="navbar-version">Version 1.6.5</span>
-    </nav>
-
-    <div class="container">
-        <div class="header">
-            <h1>Coin Flip Experiment</h1>
-        </div>
-
-        <div class="buttons">
-            <button onclick="flipCoins()">Flip Coins</button>
-            <button onclick="filterByHead()">Head</button>
-            <button onclick="filterByTail()">Tail</button>
-            <button onclick="resetExperiment()">Reset</button>
-        </div>
-
-        <div class="results">
-            Head: <span id="head-count">0</span> | Tail: <span id="tail-count">0</span> <br>
-            People Left: <span id="people-left">1000</span> | People Removed: <span id="people-removed">0</span>
-        </div>
-
-        <div class="counter">
-            Flip Button Pressed: <span id="flip-count">0</span> times | 
-            Head Button Pressed: <span id="head-press-count">0</span> times | 
-            Tail Button Pressed: <span id="tail-press-count">0</span> times
-        </div>
-
-        <div id="people-container"></div>
-
-        <div class="footer">
-            <a href="instructions.html" class="instructions-link">How to Use this Site</a>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-    
+  <a class="skip-link" href="#experiment">Skip to experiment</a>
+  <header class="site-header wrap">
+    <a class="brand" href="index.html" aria-label="Coin Flip home"><span class="brand-mark" aria-hidden="true">c<span>f</span></span>coinflip<span class="brand-period">.</span></a>
+    <nav aria-label="Main navigation"><a class="active" href="index.html" aria-current="page">The experiment</a><a href="instructions.html">How it works</a><a href="about.html">About</a></nav>
+    <span class="header-note"><span class="status-dot"></span> A little experiment in chance</span>
+  </header>
+  <main class="wrap">
+    <section class="hero" aria-labelledby="page-title">
+      <div><p class="eyebrow"><span class="tiny-star" aria-hidden="true">✳</span> THE PROBABILITY PLAYGROUND</p><h1 id="page-title">Leave a little to <em>chance.</em></h1></div>
+      <p class="hero-description">One thousand people. One coin each.<br> Flip, follow the outcomes, and see<br> where randomness takes you.</p>
+    </section>
+    <section class="stats" aria-label="Experiment statistics">
+      <div class="stat"><span class="stat-label"><span class="stat-symbol people-symbol" aria-hidden="true">↗</span>People remaining</span><div class="stat-value"><span id="people-left">1,000</span><span class="stat-context">/ 1,000</span></div></div>
+      <div class="stat"><span class="stat-label"><span class="stat-symbol heads-symbol" aria-hidden="true">H</span>Heads</span><div class="stat-value"><span id="head-count">0</span><span id="head-percent" class="stat-context">0%</span></div></div>
+      <div class="stat"><span class="stat-label"><span class="stat-symbol tails-symbol" aria-hidden="true">T</span>Tails</span><div class="stat-value"><span id="tail-count">0</span><span id="tail-percent" class="stat-context">0%</span></div></div>
+      <div class="stat"><span class="stat-label"><span class="stat-symbol removed-symbol" aria-hidden="true">−</span>People removed</span><div class="stat-value"><span id="people-removed">0</span><span id="removed-percent" class="stat-context">0% of total</span></div></div>
+    </section>
+    <section id="experiment" class="experiment" aria-label="Coin flip experiment" tabindex="-1">
+      <aside class="control-panel">
+        <div class="panel-heading"><span class="eyebrow">MAKE YOUR MOVE</span><span class="round-badge">Round <span id="flip-count">0</span></span></div>
+        <div class="coin-stage" aria-hidden="true"><span class="orbit orbit-one"></span><span class="orbit orbit-two"></span><div class="hero-coin" id="hero-coin"><span class="coin-rim">H</span></div><span class="coin-spark spark-one">✦</span><span class="coin-spark spark-two">+</span><span class="coin-shadow"></span></div>
+        <h2>A flip changes everything.</h2>
+        <p class="control-description">Give every remaining person a fresh 50/50 chance.</p>
+        <button id="flip-button" class="button button-primary"><span class="flip-icon" aria-hidden="true">⤨</span><span>Flip the coins</span><span class="button-arrow" aria-hidden="true">↗</span></button>
+        <p class="keyboard-hint">or press <kbd>Space</kbd> to flip</p>
+        <div class="filter-section"><div class="filter-heading"><h3>Narrow the field</h3><span class="info-mark" title="Keeping one side removes everyone with the other result.">i</span></div><p>Keep one side. See who's left.</p><div class="filter-buttons"><button id="heads-button" class="button button-filter" disabled><span class="mini-coin heads-symbol" aria-hidden="true">H</span>Keep heads<span id="head-press-count" class="press-count">0</span></button><button id="tails-button" class="button button-filter" disabled><span class="mini-coin tails-symbol" aria-hidden="true">T</span>Keep tails<span id="tail-press-count" class="press-count">0</span></button></div></div>
+        <button id="reset-button" class="reset-button"><span aria-hidden="true">↺</span> Start over</button>
+        <p id="action-status" class="action-status" role="status" aria-live="polite" aria-atomic="true">All set. Your first flip awaits.</p>
+      </aside>
+      <div class="field-panel">
+        <div class="field-heading"><div><h2>The playing field<span class="live-dot" aria-hidden="true"></span></h2><p id="field-caption">1,000 possibilities. Let's see what happens.</p></div><span class="field-scale"><span class="sample-dot" aria-hidden="true"></span> 1 dot = 1 person</span></div>
+        <div class="people-area"><div id="people-container" role="img" aria-label="1,000 people with unflipped coins"></div><div id="empty-state" class="empty-state" hidden><span aria-hidden="true">∅</span><h3>That's the whole field.</h3><p>No people remain. Start over to explore again.</p><button id="empty-reset-button" class="button button-secondary">Try a new experiment ↗</button></div></div>
+        <div class="field-footer"><div class="legend"><span><i class="legend-dot unflipped-dot"></i>Unflipped</span><span><i class="legend-dot heads-dot"></i>Heads</span><span><i class="legend-dot tails-dot"></i>Tails</span></div><span id="remaining-label">100% of the starting field</span></div>
+        <div class="distribution"><div class="distribution-labels"><span>Outcome distribution</span><span id="distribution-caption">Waiting for the first flip</span></div><div class="distribution-track" role="img" id="distribution-bar" aria-label="No coins flipped yet"><span id="heads-bar"></span><span id="tails-bar"></span></div><div class="distribution-note"><span>Two outcomes. Equal opportunity.</span><span>50 / 50 theoretical odds</span></div></div>
+      </div>
+    </section>
+    <section class="below-experiment" aria-label="Experiment details">
+      <div class="history-panel"><div class="section-heading"><h2>A little history</h2><span>YOUR LAST 6 MOVES</span></div><ol id="history-list" class="history-list"><li class="history-empty">Every experiment starts somewhere. Make your first move.</li></ol></div>
+      <aside class="insight-panel"><span class="insight-icon" aria-hidden="true">✳</span><div><p class="eyebrow">THE BEAUTY OF RANDOMNESS</p><h2>Fair doesn't mean perfectly even.</h2><p>Each coin has a 50% chance of landing on heads. Real results can vary, and that's exactly what makes this interesting.</p><a href="instructions.html">Get to know the experiment <span aria-hidden="true">↗</span></a></div></aside>
+    </section>
+  </main>
+  <footer class="site-footer wrap"><span>A small playground for big probabilities.</span><span>Made by <a href="about.html">Rabit Bin Khalil</a><span class="footer-divider">/</span>v2.0</span></footer>
 </body>
 </html>

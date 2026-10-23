@@ -1,41 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coin Flip Experiment - Instructions</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="How it works — an interactive probability playground with 1,000 coin flips.">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>How it works — Coin Flip</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="navbar-left">
-            <a href="index.html">Home</a>
-            <a href="instructions.html">Instructions</a>
-            <a href="about.html">About</a>
-        </div>
-    </nav>
-
-    <div class="container">
-        <div class="header">
-            <h1>How to Use the Coin Flip Experiment</h1>
-        </div>
-
-        <div class="content">
-            <h2>Instructions</h2>
-            <p>Follow these steps to use the Coin Flip Experiment:</p>
-            <ul>
-                <li><strong>Flip Coins:</strong> Click the "Flip Coins" button to flip the coins for all 1,000 people.</li>
-                <li><strong>Filter Results:</strong> Use the "Head" or "Tail" buttons to filter the results and see how many people got Heads or Tails.</li>
-                <li><strong>Reset Experiment:</strong> Click the "Reset" button to start over with 1,000 people.</li>
-            </ul>
-        </div>
-
-        <div class="footer">
-            <a href="index.html" class="back-link">Back to Experiment</a>
-        </div>
+<body class="reading-page">
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="brand" href="index.html" aria-label="Coin Flip home"><span class="brand-mark" aria-hidden="true">c<span>f</span></span>coinflip<span class="brand-period">.</span></a>
+    <nav aria-label="Main navigation"><a href="index.html">The experiment</a><a class="active" aria-current="page" href="instructions.html">How it works</a><a href="about.html">About</a></nav>
+    <span class="header-note"><span class="status-dot"></span> A little experiment in chance</span>
+  </header>
+  <main class="wrap" id="content" tabindex="-1">
+    <section class="reading-hero"><p class="eyebrow"><span class="tiny-star" aria-hidden="true">✳</span> A FIELD GUIDE TO CHANCE</p><h1>Simple rules.<br><em>Endless possibilities.</em></h1><p>No setup. No right answers. Just 1,000 people, a fair coin each, and a little curiosity. Here's how to get your experiment going.</p></section>
+    <div class="reading-layout">
+      <section class="reading-card" aria-label="Experiment instructions"><ol class="steps">
+        <li><h2>Give chance a nudge.</h2><p>Click <strong>Flip the coins</strong> or press <kbd>Space</kbd> while the page is focused. Every remaining person flips a new coin independently: 50% chance of heads, 50% chance of tails. Orange dots marked H are heads; green dots marked T are tails. Hover over a dot to see its participant number and result.</p></li>
+        <li><h2>Choose who stays.</h2><p>Click <strong>Keep heads</strong> to remove everyone showing tails, or <strong>Keep tails</strong> to remove everyone showing heads. This removes people from the experiment until you start over. The small numbers on these buttons count how often you've used each one.</p></li>
+        <li><h2>Flip. Keep. Repeat.</h2><p>Flip again to give the remaining people a fresh result. Keep a side again and watch the field shrink. The dashboard and outcome bar always describe the people currently remaining. Your last six moves appear below the experiment.</p></li>
+        <li><h2>Start a new story.</h2><p>Click <strong>Start over</strong> whenever you like. All 1,000 people return with unflipped coins, and every counter and the move history resets. Your experiment also starts fresh when you reload the page or return from another page.</p></li>
+      </ol></section>
+      <aside class="reading-aside">
+        <div class="insight-panel"><span class="insight-icon" aria-hidden="true">✳</span><div><p class="eyebrow">TRY THIS</p><h2>How far can heads go?</h2><p>Flip, keep heads, and repeat. You might expect about half the people to remain each time. How many rounds does it take to reach just one person, or none?</p><a href="index.html">Give it a go <span aria-hidden="true">↗</span></a></div></div>
+        <section class="reading-card"><h2>A few things to know.</h2><p>Filtering is available after your first flip. Keeping the same side twice without flipping again leaves the field unchanged. Keeping the opposite side can leave no one remaining.</p><p>A fair coin doesn't promise an even split. Each flip is independent, and an earlier result doesn't change the next coin's chances.</p><a class="button button-primary" href="index.html">Back to the experiment <span aria-hidden="true">↗</span></a></section>
+      </aside>
     </div>
-
+  </main>
+  <footer class="site-footer wrap"><span>A small playground for big probabilities.</span><span>Made by <a href="about.html">Rabit Bin Khalil</a><span class="footer-divider">/</span>v2.0</span></footer>
 </body>
 </html>
